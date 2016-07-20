@@ -1,0 +1,12 @@
+#!/bin/bash
+
+osascript -e \
+    "do shell script \
+    \"\
+    sudo /Applications/XAMPP/xamppfiles/ctlscript.sh restart mysql\
+    ; \
+    sudo /Applications/XAMPP/xamppfiles/ctlscript.sh restart apache\
+    \" with administrator privileges"
+
+open http://localhost/
+#open -a "Google Chrome" http://localhost/
